@@ -46,12 +46,8 @@ This will open up the index html file and get your development environment start
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/Ejguzman3988/hobby-client. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/Ejguzman3988/hobby-client/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/mguachun/concert-client.git. 
 
-
-## Code of Conduct
-
-Everyone interacting in the Bankroll Management project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/Ejguzman3988/hobby-client/blob/master/CODE_OF_CONDUCT.md).
 
 ## Available Scripts
 
