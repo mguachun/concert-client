@@ -12,7 +12,7 @@ To get started first, fork and clone this repo. Also fork and clone [the backend
 
 And then execute:
 
-    $ cd hobby-api
+    $ cd concert-api-backend
     $ bundle install
 
 To test run **rails s** in the console
