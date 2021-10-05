@@ -3,6 +3,14 @@
 h1, h3 {
   font-family: 'Stick No Bills', sans-serif;
 }
+
+.form-container {
+  border-radius: 25px;
+  border: 2px solid #281aaa;
+  padding: 20px;
+  width: 200px;
+  height: 350px;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
