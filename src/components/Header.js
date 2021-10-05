@@ -3,7 +3,7 @@ import React from 'react'
 function Header() {
   return (
     <div>
-      <h1>Ticket Tracker</h1>
+      <h1 style={{ paddingLeft: "50px"}}>Ticket Tracker</h1>
     </div>
   )
 }
