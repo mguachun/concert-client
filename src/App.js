@@ -15,10 +15,13 @@ const App = (props) => {
         <NavBar />
         <Header />
         <Route path="/" component={Home} />
-        <div style={{paddingLeft: "900px"}}className="concert-container">
+        <div style={{paddingLeft: "900px"}}className="concert-form">
         <ConcertForm />
+        </div>
+        <div>
         <ConcertCard />
         </div>
+
   
       </div>
 

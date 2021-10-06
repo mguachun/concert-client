@@ -36,7 +36,7 @@ class ConcertForm extends Component {
 
     render() {
         return (
-            <div className="concert-form">
+            <div className="form-container">
                 <h1> Track a Ticket </h1>
                 <form onSubmit={this.handleSubmit}>
                     <label>Artist:</label>
