@@ -15,7 +15,7 @@ class ConcertForm extends Component {
     //allows change of state for any field DRY
     handleChange = (e) => {
         this.setState({
-            [e.target.name]: e.target.valu
+            [e.target.name]: e.target.value
 
         });
     };
@@ -36,7 +36,7 @@ class ConcertForm extends Component {
 
     render() {
         return (
-            <div className="form-container">
+            <div className="concert-form">
                 <h1> Track a Ticket </h1>
                 <form onSubmit={this.handleSubmit}>
                     <label>Artist:</label>
