@@ -4,7 +4,8 @@ import './index.css';
 import Home from "./containers/Home";
 import Header from "./components/Header";
 import NavBar from "./components/NavBar";
-import ConcertForm from "./containers/forms/ConcertForm";
+import ConcertForm from "./components/forms/ConcertForm";
+import ConcertCard from "./components/ConcertCard";
 
 
 const App = (props) => {
@@ -14,8 +15,9 @@ const App = (props) => {
         <NavBar />
         <Header />
         <Route path="/" component={Home} />
-        <div style={{paddingLeft: "900px"}}className="concert-form">
+        <div style={{paddingLeft: "900px"}}className="concert-container">
         <ConcertForm />
+        <ConcertCard />
         </div>
   
       </div>
