@@ -7,13 +7,16 @@ const Home = () => {
         <h3 style={{textAlign: "left", paddingLeft: "50px"}}>Home:</h3>
         <p
         style={{
-          textAlign: "justify",
-          fontSize: 20,
-          fontFamily: "serif",
-          fontStyle: "oblique",
-          padding: "50px",
-          paddingRight: "300px",
-          paddingLeft: "20px"
+          
+          textAlign: "center",
+          fontSize: 21,
+          padding: "30px",
+          paddingRight: "250px",
+          paddingLeft: "20px",
+          borderStyle: "dashed",
+          borderRadius: "25px",
+          borderWidth: "2px",
+          borderColor: "#3621ad"
         }}
       >
         Ticket Tracker is a single page application that helps you keep track of 
