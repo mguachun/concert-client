@@ -24,7 +24,7 @@ class NavBar extends React.Component {
           style={link}
           /* add prop for activeStyle */
           activeStyle={{
-            background: 'darkblue'
+            background: '#3621ad'
           }}
         >Home</NavLink>
         <NavLink
@@ -32,7 +32,7 @@ class NavBar extends React.Component {
           exact
           style={link}
           activeStyle={{
-            background: 'darkblue'
+            background: '#3621ad'
           }}
         >About</NavLink>
         <NavLink
@@ -40,7 +40,7 @@ class NavBar extends React.Component {
           exact
           style={link}
           activeStyle={{
-            background: 'darkblue'
+            background: '#3621ad'
           }}
         >Login</NavLink>
       </div>
