@@ -5,11 +5,13 @@ const link = {
   fontfamily: 'Stick No Bills',
   fontstyle: 'sans-serif',
   width: '100px',
-  padding: '12px',
   margin: '0 6px 6px',
-  background: 'blue',
+  background: '#3621ad',
   textDecoration: 'none',
   color: 'white',
+  borderRadius: '30px',
+  border: '1px',
+  padding: '12px',
 }
 
 class NavBar extends React.Component {
