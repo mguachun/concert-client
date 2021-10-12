@@ -3,16 +3,16 @@ import Home from '../containers/Home'
 import ConcertForm from '../components/ConcertForm'
 import ConcertCard from '../components/ConcertCard'
 import Search from '..components/Search'
+import ConcertData from '../components/ConcertData'
 
 class ConcertList extends Component {
     state = {
-        artist: '',
-        concert_title: '',
-        venue: '',
-        date: '',
-        genre:'',
-        comment:''
+        concerts: [],
+
     };
+    // listConcerts = () => {
+    //     return this.props.banks.map((bank) => {})
+    // }
 
     addConcert = (concertData) => {
         this.setState((prevState) => {
@@ -31,16 +31,7 @@ class ConcertList extends Component {
         concert_title={concert.concert_title} venue={concert.venue} date={concert.date} genre={concert.genre} comment={concert.comment}/>)
     }
 
-    componentDidMount() {
-        const url = "http://localhost:3000/"
-        fetch(url)
-        .then(resp => resp.json())
-        .then(data=> {
-            this.setState({
-                concerts:data
-            })
-        })
-    }
+  
 
     handleSearchChange = (e) => {
         console.log(e.target.value)
