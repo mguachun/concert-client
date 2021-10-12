@@ -6,8 +6,6 @@ class ConcertData extends Component {
         concerts: []
     }
 
-    
-
    render() {
         const { artist, concert_title, venue, date, genre, comment} = this.props
      //  console.log(this.props)
