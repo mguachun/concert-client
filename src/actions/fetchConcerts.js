@@ -1,10 +1,13 @@
 export const fetchConcerts = () => {
   return (dispatch) => {
     dispatch({ type: 'LOADING_CONCERTS'})
-    fetch(this.baseUrl).then(response => {
+    fetch("http://localhost:3000/concerts")
+    .then(response => {
       return response.json()
     }).then(responseJSON => {
-      dispatch({ type: 'ADD_CONCERTS', concerts: responseJSON.concerts })
+      dispatch({ type: 'ADD_CONCERTS', concerts: responseJSON })
     })
   }
 }
+
+
