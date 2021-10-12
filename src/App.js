@@ -55,13 +55,6 @@ class App extends Component {
 //   return {
   // concerts: state.concerts
   // loading: state.loading
-
-//     artist: state.concertsReducer.artists,
-//     concert_title: state.concertsReducer.concert_title,
-//     venue: state.concertsReducer.venue,
-//     date: state.concertsReducer.date,
-//     genre: state.concertsReducer.genre,
-//     comment: state.concertsReducer.comment,
 //   }
 // }
 // const mapDispatchToProps = dispatch => {
