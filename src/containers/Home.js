@@ -4,7 +4,7 @@ import React from "react";
 const Home = () => {
     return (
       <div>
-        <h3 style={{textAlign: "left", paddingLeft: "50px"}}>"Tracking concerts and memories"</h3>
+        <h3 style={{textAlign: "left", paddingLeft: "50px"}}>"<em>Tracking concerts and memories"</em></h3>
         <p
         style={{
           
@@ -22,7 +22,7 @@ const Home = () => {
     
         }}
       >
-        Ticket Tracker is a single page application that helps you keep track of 
+        <strong>Ticket Tracker</strong> is a single page application that helps you keep track of 
         your concerts and live shows. It allows you to view concerts you've seen in the past and logs shows you have
         planned for the future.
 
