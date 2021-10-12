@@ -26,7 +26,7 @@ class App extends Component {
     .then(response => {
       return response.json()
     }).then(responseJSON => {
-      debugger
+      // debugger
       // dispatch({ type: 'ADD_CONCERTS', concerts: responseJSON })
     })
   }
