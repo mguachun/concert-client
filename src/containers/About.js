@@ -19,7 +19,7 @@ const About = () => {
           borderWidth: "2px",
           borderColor: "#3621ad",
           width: "500px",
-          height: "200px"
+          height: "250px"
           
 
         }}
@@ -27,8 +27,9 @@ const About = () => {
        <strong>Ticket Tracker</strong> was inspired by my own concert ticket collection from childhood.
        After every show I would retrieve my tickets and a keep them in a box with other trinkets and photos
        for safe keeping. Every so often I would take the box out to go through my tickets to relive the memories
-       I had from each show and concert. Concerts have changed quite a bit since then which inspired me to bring this 
-       concept into the new age of digital concerts and streaming. 
+       I had from each concert. Concerts have changed quite a bit since then but tickets continue to be a momento that encapsulates
+       special moments in time. The digitization of tickets and concerts all together is what ultimately 
+       inspired me to bring this concept into a new age. 
 
 
       </p>
