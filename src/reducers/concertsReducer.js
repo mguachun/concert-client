@@ -9,7 +9,7 @@ const concertsReducer = (state = { concerts: [], loading: false }, action) => {
     case 'ADD_CONCERTS':
       return {
         ...state,
-        cats: action.concerts,
+        concerts: action.concerts,
         loading: false
       }
     default:
