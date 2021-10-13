@@ -5,7 +5,7 @@ export const fetchConcerts = () => {
     .then(response => {
       return response.json()
     }).then(responseJSON => {
-      dispatch({ type: 'ADD_CONCERTS', concerts: responseJSON })
+      // dispatch({ type: 'GET_CONCERTS', concerts:responseJSON })
     })
   }
 }
