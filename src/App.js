@@ -10,26 +10,27 @@ import NavBar from "./components/NavBar";
 import ConcertForm from "./components/forms/ConcertForm";
 import ConcertCard from "./components/ConcertCard";
 import { fetchConcerts } from "./actions/fetchConcerts";
+import ConcertList from "./containers/ConcertList";
 
 class App extends Component {
 
-  constructor(props) {
-    super()
-    this.state = {} 
-  }
-  state = {
-    concerts: []
-  }
+  // constructor(props) {
+  //   super()
+  //   this.state = {} 
+  // }
+  // state = {
+  //   concerts: []
+  // }
 
-  componentDidMount() {
-    fetch("http://localhost:3000/concerts")
-    .then(response => {
-      return response.json()
-    }).then(responseJSON => {
-      // debugger
-      // dispatch({ type: 'ADD_CONCERTS', concerts: responseJSON })
-    })
-  }
+  // componentDidMount() {
+  //   fetch("http://localhost:3000/concerts")
+  //   .then(response => {
+  //     return response.json()
+  //   }).then(responseJSON => {
+  //     // debugger
+  //     // dispatch({ type: 'ADD_CONCERTS', concerts: responseJSON })
+  //   console.log(responseJSON)})
+  // }
 
   render() {
     return (
@@ -38,13 +39,14 @@ class App extends Component {
           <NavBar />
           <Header />
           <Route path="/" component={Home} />
+          <Route path="/create" component={ConcertForm} />
           <Route path="/about" component={About} />
           <div style={{paddingLeft: "900px"}}className="concert-list">
-          <ConcertForm />
           </div>
           <div>
           <ConcertCard />
           </div>
+          <ConcertList />
           <div></div>
         </div>
       </Router>
