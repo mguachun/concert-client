@@ -5,7 +5,7 @@ const link = {
   fontfamily: 'Stick No Bills',
   fontstyle: 'sans-serif',
   width: '100px',
-  margin: '0 6px 6px',
+  margin: '0 4px 4px',
   background: '#3621ad',
   textDecoration: 'none',
   color: 'white',
@@ -30,13 +30,13 @@ class NavBar extends React.Component {
           }}
         >Home</NavLink>
         <NavLink
-          to="/search"
+          to="/create"
           exact
           style={link}
           activeStyle={{
             background: '#3621ad'
           }}
-        >Search</NavLink>
+        >Add a Ticket</NavLink>
         <NavLink
           to="/about"
           exact
