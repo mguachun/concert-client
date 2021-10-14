@@ -7,10 +7,11 @@ h1, h3, p {
 .form-container {
   border-radius: 25px;
   border: 2px solid #281aaa;
-  padding: 20px;
-  width: 200px;
+  padding: 50px;
+  width: 600px;
   height: 350px;
   margin-left: 90px;
+  margin: 50px;
 }
 
 body {
