@@ -28,7 +28,7 @@ const Home = () => {
 
       </p>
         <img
-          style={{ float: "left", padding: "10px", paddingLeft: "220px", marginTop: "-270px" }}
+          style={{ float: "left", padding: "10px", paddingLeft: "220px", marginTop: "-260px" }}
           src="https://media.giphy.com/media/MUFlTPzL3fBmwIPiTK/giphy.gif"
           alt="blinking ticket gif"
           height="50px"
