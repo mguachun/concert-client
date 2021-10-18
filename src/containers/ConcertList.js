@@ -68,7 +68,7 @@ class ConcertList extends Component {
     }
 }
 
-export default ConcertList 
+export default ConcertList;
 
   
   
