@@ -11,12 +11,7 @@ class ConcertData extends Component {
      //  console.log(this.props)
     return (
         <div className="concert-card"  >
-            <h2>{this.props.artist}</h2>
-            <h3>{this.props.concert_title}</h3>
-            <p>{this.props.venue}</p>
-            <p>{this.props.date}</p>
-            <p>{this.props.genre}</p>
-            <p>{this.props.comment}</p>
+          
 
         </div>
         )
