@@ -9,7 +9,7 @@ h1, h3, p, div{
   margin-left: 10px;
 }
 
-.delete-btn {
+.list-delete-btn {
   border-radius: 10px;
   border: 2px solid #281aaa;
   margin-right: 1010px;
@@ -31,9 +31,10 @@ h1, h3, p, div{
   border: 2px solid #281aaa;
   padding: 50px;
   width: 600px;
-  height: 350px;
+  height: 450px;
   margin-left: 90px;
   margin: 50px;
+  font-size: 20px;
 }
 
 body {
