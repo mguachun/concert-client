@@ -4,12 +4,12 @@ import React from "react";
 const About = () => {
     return (
       <div>
-        <h3 style={{textAlign: "left", paddingLeft: "50px"}}>About:</h3>
+        <h3 style={{textAlign: "left", paddingLeft: "50px", fontSize: "25px"}}>About 🎫 :</h3>
         <p
         style={{
           
           textAlign: "center",
-          fontSize: 21,
+          fontSize: "21px",
           padding: "30px",
           paddingRight: "50px",
           paddingLeft: "50px",
