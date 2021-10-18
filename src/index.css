@@ -4,6 +4,10 @@ h1, h3, p, div{
   font-family: 'Stick No Bills', sans-serif;
 }
 
+.c-index {
+margin-left: 10px;
+}
+
 .filter-bar {
   font-size: 20px;
   margin-left: 10px;
