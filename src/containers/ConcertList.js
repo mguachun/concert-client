@@ -49,8 +49,8 @@ class ConcertList extends Component {
         Venue: {object.venue} <br/>
         Date: {object.date} <br/>
         Genre: {object.genre}<br/>
-        Comment: {object.comment}
-        <div className="delete-btn"> Delete X</div>
+        Comment: <em> {object.comment} </em>
+        <div className="list-delete-btn"> Delete X</div>
         </div>)
         )
 
