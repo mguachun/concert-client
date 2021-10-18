@@ -4,6 +4,8 @@ import concertsReducer from '../reducers/concertsReducer'
 // import ConcertCard from '../components/ConcertCard'
 // import Search from '..components/Search'
 import ConcertData from '../components/ConcertData'
+import FilterBar from "../components/FilterBar"
+
 class ConcertList extends Component {
     constructor(props) {
         super()
@@ -28,7 +30,6 @@ class ConcertList extends Component {
     }
 
   
-
     addConcert = (concertData) => {
         // console.log(concertData)
         this.setState( {
@@ -38,29 +39,22 @@ class ConcertList extends Component {
             // }
         })
         //we want an array of objects
-    
         // console.log(this.state.concerts)
     }
 
     displayConcerts = () => {
         return(
-        this.state.concerts.map(object => <div><h1>{object.artist}</h1> {object.concert_title}, {object.venue}, {object.date}, {object.genre},{object.comment}</div>)
+        this.state.concerts.map(object => <div className="concert-data"><h1>{object.artist}</h1> 
+        Concert Title: {object.concert_title}<br/>
+        Venue: {object.venue} <br/>
+        Date: {object.date} <br/>
+        Genre: {object.genre}<br/>
+        Comment: {object.comment}
+        <div className="delete-btn"> Delete X</div>
+        </div>)
         )
 
     }
-
-
-
-    // makeConcertCard() {
-    //     let concertCards = this.state.concerts
-    //     if(this.state.search){
-    //         concertCards = this.state.concerts.filter((concert) => concert.title.toLowerCase().includes(this.state.search.toLowerCase()))
-    //     }
-    //     return concertCards.map(concert => <Concert key={concert.id} id={concert.id} artist={concert.artist} 
-    //     concert_title={concert.concert_title} venue={concert.venue} date={concert.date} genre={concert.genre} comment={concert.comment}/>)
-    // }
-
-
 
     render() {
         // debugger
@@ -71,13 +65,8 @@ class ConcertList extends Component {
                 { this.state.concerts ? this.displayConcerts() : "loading"}
             </div>
         )
-
-        
-
     }
-
 }
-
 
 export default ConcertList 
 
