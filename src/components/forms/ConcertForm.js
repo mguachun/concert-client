@@ -95,7 +95,7 @@ class ConcertForm extends Component {
                     </div>
                 </form>
                 <img
-          style={{ float: "left", paddingLeft: "210px", marginTop: "-420px" }}
+          style={{ float: "left", paddingLeft: "215px", marginTop: "-400px" }}
           src="https://media.giphy.com/media/MUFlTPzL3fBmwIPiTK/giphy.gif"
         //   "https://media.giphy.com/media/ThfdBssxMqeE8/giphy.gif"
         // "https://media.giphy.com/media/kinlAqef3yqTIj9PyB/giphy.gif"
