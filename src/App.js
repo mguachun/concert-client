@@ -9,8 +9,9 @@ import Header from "./components/Header";
 import NavBar from "./components/NavBar";
 import ConcertForm from "./components/forms/ConcertForm";
 import ConcertCard from "./components/ConcertCard";
-import { fetchConcerts } from "./actions/fetchConcerts";
 import ConcertList from "./containers/ConcertList";
+import FilterBar from './components/FilterBar';
+
 
 class App extends Component {
 
@@ -41,13 +42,13 @@ class App extends Component {
           <Route path="/" component={Home} />
           <Route path="/create" component={ConcertForm} />
           <Route path="/about" component={About} />
+          <FilterBar />
           <div style={{paddingLeft: "900px"}}className="concert-list">
           </div>
           <div>
           <ConcertCard />
           </div>
           <ConcertList />
-          <div></div>
         </div>
       </Router>
     );
