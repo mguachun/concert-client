@@ -44,7 +44,7 @@ class ConcertList extends Component {
 
     displayConcerts = () => {
         return(
-        this.state.concerts.map(object => <div className="concert-data"><h1>{object.artist}</h1> 
+        this.state.concerts.map(object => <div className="concert-data"><h1>{object.artist} 🎤   </h1> 
         Concert Title: {object.concert_title}<br/>
         Venue: {object.venue} <br/>
         Date: {object.date} <br/>
@@ -61,7 +61,7 @@ class ConcertList extends Component {
     //    console.log(this.state.concerts)
         return (
             <div>
-                <h1>Concert Index:</h1>
+                <h1 className="c-index">Concert Index:</h1>
                 { this.state.concerts ? this.displayConcerts() : "loading"}
             </div>
         )
