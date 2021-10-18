@@ -11,7 +11,7 @@ const link = {
   color: 'white',
   borderRadius: '30px',
   border: '1px',
-  padding: '12px',
+  padding: '10px',
   fontSize: '19px',
 }
 
