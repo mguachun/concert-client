@@ -1,9 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@200&display=swap');
 
-h1, h3, p {
+h1, h3, p, div{
   font-family: 'Stick No Bills', sans-serif;
 }
 
+.filter-bar {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.delete-btn {
+  border-radius: 10px;
+  border: 2px solid #281aaa;
+  margin-right: 1010px;
+  text-align: center;
+
+}
+
+.concert-data {
+  border-radius: 25px;
+  border: 2px solid #281aaa;
+  margin-left: 10px;
+  margin-right: 100px;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 20px;
+}
 .form-container {
   border-radius: 25px;
   border: 2px solid #281aaa;
