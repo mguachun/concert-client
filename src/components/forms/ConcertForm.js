@@ -1,7 +1,8 @@
 import { Component } from 'react';
-
+import { connect } from 'react-redux'
 
 class ConcertForm extends Component {
+    cons
     state = {
         artist: '',
         concert_title: '',
@@ -94,7 +95,7 @@ class ConcertForm extends Component {
                     </div>
                 </form>
                 <img
-          style={{ float: "left", padding: "10px", paddingLeft: "172px", marginTop: "-350px" }}
+          style={{ float: "left", paddingLeft: "210px", marginTop: "-420px" }}
           src="https://media.giphy.com/media/MUFlTPzL3fBmwIPiTK/giphy.gif"
         //   "https://media.giphy.com/media/ThfdBssxMqeE8/giphy.gif"
         // "https://media.giphy.com/media/kinlAqef3yqTIj9PyB/giphy.gif"
