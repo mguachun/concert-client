@@ -12,6 +12,7 @@ const link = {
   borderRadius: '30px',
   border: '1px',
   padding: '12px',
+  fontSize: '19px',
 }
 
 class NavBar extends React.Component {
