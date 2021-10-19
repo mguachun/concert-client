@@ -1,110 +1,142 @@
 import { Component } from 'react';
 import { connect } from 'react-redux'
+// import ConcertList from './containers/ConcertList'
 
 class ConcertForm extends Component {
-    cons
+
     state = {
-        artist: '',
-        concert_title: '',
-        venue: '',
-        date: '',
-        genre:'',
-        comment:''
-    };
+        concerts: []
+    }
 
 
-    //allows change of state for any field DRY
-    handleChange = (e) => {
-        this.setState({
-            [e.target.name]: e.target.value
 
-        });
-    };
+    // fetchNewConcert = (concert) => {
+    //     const configObj = {
+    //         method: "POST",
+    //         headers: {
+    //             accept: "application/json",
+    //             "Content-Type": "application/json"
+    //         },
+    //         body: JSON.stringify(this.state)
+    //     }
+    //     fetch("http://localhost:3000/concerts", configObj)
+    //     .then(resp => resp.json())
+    //     .then(json => this.addConcert(json))
+    // }
+
+
 
     handleSubmit = (e) => {
+        console.log(e.target)
         e.preventDefault();
-        console.log(this.state.artist, this.state.concert_title, this.state.venue, this.state.date, this.state.genre, this.state.comment);
-        this.setState({
-            artist: '',
-            concert_title: '',
-            venue: '',
-            date: '',
-            genre:'',
-            comment:''
+        e.target.reset()
 
-        });
+      const concert = {...this.state}
+      const url = "http://localhost:3000/concerts"
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(concert),
+        })
+        .then(resp => resp.json())
+        .then(data => {
+            this.setState({
+                artist: '',
+                concert_title: '',
+                venue: '',
+                date: '',
+                genre:'',
+                comment:''
+            })
+        })
+        window.location.replace(`http://localhost:3001/`)
+      
     };
 
-    render() {
-        return (
-            <div className="form-container">
-                <form>
+    onFormChange = (e) => {
+        const name = e.target.name
+        const value = e.target.value
+
+        this.setState({
+            [name]: value
+
+        }, () => console.log(this.state))
+    }
+
+        //allows change of state for any field DRY
+        handleChange = (e) => {
+            this.setState({
+                [e.target.name]: e.target.value
+    
+            });
+        };
+
+        displayFormChange = () => {
+            const { artist, concert_title, venue, date, genre, comment } = this.state
+            return(
+
+                <div className="form-container">
+                <form id="concert-form" onSubmit={this.handleSubmit}>
                 <h1> Track a Ticket </h1>
                 <div>
-                     {/* the value of each input must rely on the state
-                    <label>Artist:</label>
-                    <input type="text" value={this.state.artist} onChange={this.handleChange} name="artist"/> <br />
-                    </div>
-                    <label>Concert Title:</label>
-                    <input type="text" value={this.state.concert_title} onChange={this.handleChange} name="concert_title"/> <br />
-                    <br></br>
-                    <label>Venue:</label>
-                    <input type="venue" value={this.state.venue} onChange={this.handleChange} name="venue"/> <br />
-                    <br></br>
-                    <label>Date:</label>
-                    <input type="date" value={this.state.date} onChange={this.handleChange} name="date"/> <br />
-                    <br></br>
-                    <label>Genre:</label>
-                    <input type="genre" value={this.state.genre} onChange={this.handleChange} name="genre"/> <br />
-                    <br></br>
-                    <label>Comment:</label>
-                    <input type="comment" value={this.state.comment} onChange={this.handleChange} name="comment"/> <br />
-                    <br></br>
-                    <input type="submit" /> */}
                     <label htmlFor="artist">Artist:</label>
-                    <input className="artist" />
+                    <input name="artist" onChange={this.onFormChange} value={artist} />
                     </div>
                     <br></br>
                     <div>
                     <label htmlFor="Concert Title">Concert Title:</label>
-                    <input className="concert-title" />
+                    <input  name="concert_title" onChange={this.onFormChange} value={concert_title}/>
                     </div>
                     <br></br>
                     <div>
                     <label htmlFor="Venue">Venue:</label>
-                    <input className="venue" />
+                    <input name="venue" onChange={this.onFormChange} value={venue}/>
                     </div>
                     <br></br>
                     <div>
                     <label htmlFor="Date">Date:</label>
-                    <input className="date" />
+                    <input name="date" onChange={this.onFormChange} value={date} n/>
                     </div>
                     <br></br>
                     <div>
                     <label htmlFor="Genre">Genre:</label>
-                    <input className="genre" />
+                    <input name="genre" onChange={this.onFormChange} value={genre} />
                     </div>
                     <br></br>
                     <div>
                     <label htmlFor="Comment">Comment:</label>
-                    <input className="comment" />
+                    <input name="comment" onChange={this.onFormChange} value={comment} />
                     </div>
                     <br></br>
-                    <div>
+                    <input type="submit"  value="Add Concert"/>
+                    {/* <div>
                         <button>Submit</button>
-                    </div>
+                    </div> */}
                 </form>
                 <img
           style={{ float: "left", paddingLeft: "215px", marginTop: "-400px" }}
           src="https://media.giphy.com/media/MUFlTPzL3fBmwIPiTK/giphy.gif"
-        //   "https://media.giphy.com/media/ThfdBssxMqeE8/giphy.gif"
-        // "https://media.giphy.com/media/kinlAqef3yqTIj9PyB/giphy.gif"
           alt="blinking ticket gif"
           height="50px"
           width="50px"
         />
             </div>
+            )
+        }
+
+
+    render() {
+    console.log(this.state.concerts)
+        return (
+            <div>
+                { this.displayFormChange() } 
+            </div>
+
+    
         );
+      
     };
 };
 
