@@ -14,17 +14,15 @@ class ConcertList extends Component {
         concerts: []
     }
 
-    addConcert = (concertData) => {
-        this.setState((prevState) => {
-            return {
-                concerts: [...prevState.concerts, concertData]
-            }
-        })
-    }
+    // addConcert = (concertData) => {
+    //     this.setState((prevState) => {
+    //         return {
+    //             concerts: [...prevState.concerts, concertData]
+    //         }
+    //     })
+    // }
 
-    //callback Update func allows child to update parent state-updateState
-
-  
+    
     
     componentDidMount() {
         fetch("http://localhost:3000/concerts")
@@ -39,7 +37,14 @@ class ConcertList extends Component {
         )
     }
 
-  
+
+    deleteConcert() {
+        // Simple DELETE request with fetch
+        fetch("https://localhost:3000/concerts", { method: 'DELETE' })
+            .then(() => this.setState({ status: 'Delete successful' }));
+    }
+    
+
     addConcert = (concertData) => {
         // console.log(concertData)
         this.setState( {
@@ -55,11 +60,13 @@ class ConcertList extends Component {
         Date: {object.date} <br/>
         Genre: {object.genre}<br/>
         Comment: <em> {object.comment} </em>
-        <div className="list-delete-btn"> Delete X</div>
+        <div className="list-delete-btn" onClick=""> Delete X</div>
         </div>)
         )
 
     }
+
+    
 
     render() {
         return (
