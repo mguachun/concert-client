@@ -12,9 +12,17 @@ const concertsReducer = (state = { concerts: [], loading: false }, action) => {
         concerts: action.concerts,
         loading: false
       }
+
+      case 'DELETE_CONCERT':
+        return {
+          concerts: state.concerts.filter(concert => concert.id !== action.id),
+          ...state
+        }
+
     default:
       return state;
   }
+  
 }
 
 export default concertsReducer;
