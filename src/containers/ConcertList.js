@@ -1,10 +1,8 @@
 import { Component } from 'react'
 import concertsReducer from '../reducers/concertsReducer'
-// import Home from '../containers/Home'
-// import ConcertCard from '../components/ConcertCard'
+
 // import Search from '..components/Search'
-import ConcertData from '../components/ConcertData'
-import FilterBar from "../components/FilterBar"
+// import ConcertForm from '..components/ConcertForm'
 
 class ConcertList extends Component {
     constructor(props) {
@@ -15,6 +13,18 @@ class ConcertList extends Component {
     state = {
         concerts: []
     }
+
+    addConcert = (concertData) => {
+        this.setState((prevState) => {
+            return {
+                concerts: [...prevState.concerts, concertData]
+            }
+        })
+    }
+
+    //callback Update func allows child to update parent state-updateState
+
+  
     
     componentDidMount() {
         fetch("http://localhost:3000/concerts")
@@ -33,13 +43,8 @@ class ConcertList extends Component {
     addConcert = (concertData) => {
         // console.log(concertData)
         this.setState( {
-            // return {
                 concerts: concertData
-                // concerts: [this.set]
-            // }
         })
-        //we want an array of objects
-        // console.log(this.state.concerts)
     }
 
     displayConcerts = () => {
@@ -57,8 +62,6 @@ class ConcertList extends Component {
     }
 
     render() {
-        // debugger
-    //    console.log(this.state.concerts)
         return (
             <div>
                 <h1 className="c-index">Concert Index:</h1>
