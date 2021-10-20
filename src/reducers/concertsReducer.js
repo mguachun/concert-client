@@ -15,7 +15,7 @@ const concertsReducer = (state = { concerts: [], loading: false }, action) => {
 
       case 'DELETE_CONCERT':
         return {
-          concerts: state.concerts.filter(concert => concert.id !== action.id),
+          concerts: state.concerts.filter(concert => concert.id !== action.payload.id),
           ...state
         }
 
