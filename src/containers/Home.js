@@ -1,5 +1,6 @@
 import React from "react";
 import HowTo from "../components/HowTo";
+import TicketDecor from "../components/TicketDecor";
 
 
 const Home = () => {
@@ -27,14 +28,8 @@ const Home = () => {
         your concerts and live shows. It allows you to view concerts you've seen in the past and logs shows you have
         planned for the future. 
         <span className="how-to"> <HowTo /></span>
-      </p>
-        <img
-          style={{ float: "left", padding: "10px", paddingLeft: "220px", marginTop: "-340px" }}
-          src="https://media.giphy.com/media/MUFlTPzL3fBmwIPiTK/giphy.gif"
-          alt="blinking ticket gif"
-          height="50px"
-          width="50px"
-        />
+      </p> 
+      <div><TicketDecor /></div>
       </div>
     );
   };
