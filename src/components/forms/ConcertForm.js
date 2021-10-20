@@ -1,6 +1,5 @@
 import { Component } from 'react';
-import { connect } from 'react-redux'
-// import ConcertList from './containers/ConcertList'
+
 
 class ConcertForm extends Component {
 

@@ -1,8 +1,4 @@
 import { Component } from 'react'
-import concertsReducer from '../reducers/concertsReducer'
-
-// import Search from '..components/Search'
-// import ConcertForm from '..components/ConcertForm'
 
 class ConcertList extends Component {
     constructor(props) {
