@@ -2,7 +2,7 @@
 const ConcertCard = props => {
     return(
       <div>
-    
+   
       </div>
     )
   }
