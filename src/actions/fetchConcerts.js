@@ -1,3 +1,4 @@
+export const addConcert = (concert) => ({ type: "ADD_CONCERTS", payload: concert})
 export const fetchConcerts = () => {
   return (dispatch) => {
     dispatch({ type: 'LOADING_CONCERTS'})
@@ -11,4 +12,21 @@ export const fetchConcerts = () => {
   }
 }
 
+export const createConcert = (concert) => {
+  return (dispatch) => {
+    const configObj = {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json",
+        "Accepts": "application/json"
+      },
+      body: JSON.stringify(concert)
+    }
+    fetch("http://localhost:3000/concerts", configObj)
+    .then(res => res.json())
+    .then(json => {
+      dispatch(addConcert(json))
+    })
+  }  
+}
 
