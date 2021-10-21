@@ -24,7 +24,7 @@ const Home = () => {
   
         }}
       >
-        <strong>Ticket Tracker</strong> is a single page application that helps you keep track of 
+        <strong>Ticket Tracker</strong> is an application that helps you keep track of 
         your concerts and live shows. It allows you to view concerts you've seen in the past and logs shows you have
         planned for the future. 
         <span className="how-to"> <HowTo /></span>
