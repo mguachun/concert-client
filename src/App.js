@@ -30,7 +30,7 @@ class App extends Component {
   //   }).then(responseJSON => {
   //     // debugger
   //     // dispatch({ type: 'ADD_CONCERTS', concerts: responseJSON })
-  //   console.log(responseJSON)})
+  //   console.log({concerts: responseJSON.text})
   // }
 
   render() {
