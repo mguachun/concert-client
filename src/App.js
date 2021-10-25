@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { newFetchConcerts } from './actions/ConcertActions'
+
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import './index.css';
 import './App.css';
 import Home from "./containers/Home";
@@ -23,37 +25,50 @@ class App extends Component {
   //   concerts: []
   // }
 
-  // componentDidMount() {
-  //   fetch("http://localhost:3000/concerts")
-  //   .then(response => {
-  //     return response.json()
-  //   }).then(responseJSON => {
-  //     // debugger
-  //     // dispatch({ type: 'ADD_CONCERTS', concerts: responseJSON })
-  //   console.log({concerts: responseJSON.text})
-  // }
+  componentDidMount() {
+    this.props.newFetchConcertsWithDispatchFn()
+    // fetch("http://localhost:3000/concerts")
+    //   .then(response => {
+    //     return response.json();
+    //   })
+    //   .then((responseJSON) => {
+    //     // debugger
+    //     // dispatch({ type: 'ADD_CONCERTS', concerts: responseJSON })
+    //     console.log(responseJSON);
 
-  render() {
-    return (
-      <Router>
-        <div className="app">
-          <NavBar />
-          <Header />
-          <Route path="/" component={Home} />
-          <Route path="/create" component={ConcertForm} />
-          <Route path="/about" component={About} />
-          <FilterBar />
-          <div style={{paddingLeft: "900px"}}className="concert-list">
+        //   this.setState(() => {
+        //     return {
+        //       concerts: responseJSON
+        //     }
+        //   }, () => console.log(this.setState) )
+        // });
+
+      // });
+    } 
+      
+
+    render() {
+      console.log(this.props)
+      return (
+        <Router>
+          <div className="app">
+            <NavBar />
+            <Header /> 
+            <Route path="/" component={Home} />
+            <Route path="/create" component={ConcertForm} />
+            <Route path="/about" component={About} />
+            <FilterBar />
+            <div style={{ paddingLeft: "900px" }} className="concert-list">
+            </div>
+            <div>
+              <ConcertCard />
+            </div>
+            <ConcertList />
           </div>
-          <div>
-          <ConcertCard />
-          </div>
-          <ConcertList />
-        </div>
-      </Router>
-    );
+        </Router>
+      );
+    }
   }
-}
 // const mapStateToProps = (state) => {
 //   return {
   // concerts: state.concerts
@@ -68,5 +83,20 @@ class App extends Component {
 //   };
 // };
 
-// export default connect(mapStateToProps, mapDispatchToProps)(App);
-export default App;
+// const mdp = (globalDispatch) => {
+//   return {
+//     getConcertsWithDispatchFn: () => globalDispatch(fetchConcerts())
+//   }
+// }
+
+const mdp = (globalDispatch) => {
+  return {
+    newFetchConcertsWithDispatchFn: () => globalDispatch(newFetchConcerts())
+  }
+}
+
+const msp = (globalState) => (globalState)
+
+export default connect(msp,mdp)(App); 
+// first arg allows you to access and second arg manipulate the store
+// export default App;
