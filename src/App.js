@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { newFetchConcerts } from './actions/ConcertActions'
-
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import './index.css';
 import './App.css';
@@ -10,7 +9,6 @@ import About from "./containers/About";
 import Header from "./components/Header";
 import NavBar from "./components/NavBar";
 import ConcertForm from "./components/forms/ConcertForm";
-import ConcertCard from "./components/ConcertCard";
 import ConcertList from "./containers/ConcertList";
 import FilterBar from './components/FilterBar';
 
@@ -36,14 +34,14 @@ class App extends Component {
     //     // dispatch({ type: 'ADD_CONCERTS', concerts: responseJSON })
     //     console.log(responseJSON);
 
-        //   this.setState(() => {
-        //     return {
-        //       concerts: responseJSON
-        //     }
-        //   }, () => console.log(this.setState) )
-        // });
+    //       this.setState(() => {
+    //         return {
+    //           concerts: responseJSON
+    //         }
+    //       }, () => console.log(this.setState) )
+    //     });
 
-      // });
+    //   });
     } 
       
 
@@ -61,7 +59,6 @@ class App extends Component {
             <div style={{ paddingLeft: "900px" }} className="concert-list">
             </div>
             <div>
-              <ConcertCard />
             </div>
             <ConcertList />
           </div>
@@ -69,19 +66,7 @@ class App extends Component {
       );
     }
   }
-// const mapStateToProps = (state) => {
-//   return {
-  // concerts: state.concerts
-  // loading: state.loading
-//   }
-// }
-// const mapDispatchToProps = dispatch => {
-//   return {
-//     addConcert: (newConcert) => {
-//       dispatch(addConcert(newConcert))
-//     }
-//   };
-// };
+
 
 // const mdp = (globalDispatch) => {
 //   return {
@@ -99,4 +84,3 @@ const msp = (globalState) => (globalState)
 
 export default connect(msp,mdp)(App); 
 // first arg allows you to access and second arg manipulate the store
-// export default App;
