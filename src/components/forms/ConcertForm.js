@@ -9,22 +9,6 @@ class ConcertForm extends Component {
 
 
 
-    // fetchNewConcert = (concert) => {
-    //     const configObj = {
-    //         method: "POST",
-    //         headers: {
-    //             accept: "application/json",
-    //             "Content-Type": "application/json"
-    //         },
-    //         body: JSON.stringify(this.state)
-    //     }
-    //     fetch("http://localhost:3000/concerts", configObj)
-    //     .then(resp => resp.json())
-    //     .then(json => this.addConcert(json))
-    // }
-
-
-
     handleSubmit = (e) => {
         console.log(e.target)
         e.preventDefault();
