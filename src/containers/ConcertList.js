@@ -1,6 +1,5 @@
 import { Component } from 'react'
-// import { connect } from 'react-redux'
-// import ConcertForm from '..components/ConcertForm'
+import Concert from "./Concert"
 
 class ConcertList extends Component {
     constructor(props) {
@@ -29,10 +28,10 @@ class ConcertList extends Component {
     }
 
 
-    deleteConcert(concert) {
+    deleteConcert(object) {
         // console.log(concert)
 
-        fetch(`http://localhost:3000/concerts/${concert.id}`, {
+        fetch(`http://localhost:3000/concerts/${object.id}`, {
             method: 'DELETE',
             headers: {
                 'Content-type': 'application/json',
@@ -58,17 +57,11 @@ class ConcertList extends Component {
 
     displayConcerts = () => {
         return (
-            this.state.concerts.map(object => <div className="concert-data"><h1>{object.artist} 🎤   </h1>
-                Concert Title: {object.concert_title}<br />
-                Venue: {object.venue} <br />
-                Date: {object.date} <br />
-                Genre: {object.genre}<br />
-                Comment: <em> {object.comment} </em>
-                <button className="list-delete-btn" onClick={() => this.deleteConcert(object)}> Delete X</button>
-            </div>)
+            this.state.concerts.map(instance => <Concert deleteConcert={this.deleteConcert} object={instance}/> )
         )
-
     }
+
+
 
 
 
@@ -78,7 +71,7 @@ class ConcertList extends Component {
                 <h1 className="c-index">Concert Index:</h1>
                 {this.state.concerts ? this.displayConcerts() : "loading"}
                 {/* //using props  */}
-                {/* {this.props.loading ? <h1>LOADING....</h1> : this.makeToyCards()} */}
+                {/* this.displayConcerts() */}
             </div>
         )
     }
