@@ -41,7 +41,20 @@ export const newFetchConcerts = () => {
     })
   }
 }
+
+// export const searchConcerts = () => {
+//   return (dispatch) => {
+//     dispatch({ type: 'SEARCH_CONCERTS',value})
+//     fetch("http://localhost:3000/concerts")
+//     .then(response => {
+//     }).then(responseJSON => {
+//       // console.log(responseJSON)
+//       dispatch({ type: 'ADD_CONCERTS', concerts: responseJSON })
+//     })
+//   }
+// }  
   
+
 
 
 
