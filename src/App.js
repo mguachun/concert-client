@@ -10,18 +10,15 @@ import Header from "./components/Header";
 import NavBar from "./components/NavBar";
 import ConcertForm from "./components/forms/ConcertForm";
 import ConcertList from "./containers/ConcertList";
-import FilterBar from './components/FilterBar';
+// import Concert from "./containers/Concert"
+
+
+// import Search from "./containers/Search";
+
 
 
 class App extends Component {
 
-  // constructor(props) {
-  //   super()
-  //   this.state = {} 
-  // }
-  // state = {
-  //   concerts: []
-  // }
 
   componentDidMount() {
     this.props.newFetchConcertsWithDispatchFn()
@@ -43,7 +40,8 @@ class App extends Component {
 
     //   });
     } 
-      
+
+
 
     render() {
       console.log(this.props)
@@ -55,12 +53,12 @@ class App extends Component {
             <Route path="/" component={Home} />
             <Route path="/create" component={ConcertForm} />
             <Route path="/about" component={About} />
-            <FilterBar />
             <div style={{ paddingLeft: "900px" }} className="concert-list">
             </div>
             <div>
             </div>
             <ConcertList />
+          
           </div>
         </Router>
       );
@@ -68,11 +66,6 @@ class App extends Component {
   }
 
 
-// const mdp = (globalDispatch) => {
-//   return {
-//     getConcertsWithDispatchFn: () => globalDispatch(fetchConcerts())
-//   }
-// }
 
 const mdp = (globalDispatch) => {
   return {
