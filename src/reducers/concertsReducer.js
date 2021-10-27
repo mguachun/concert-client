@@ -1,3 +1,4 @@
+// import {Search} from "./ConcertActions"
 const concertsReducer = (state = { concerts: [], loading: false }, action) => {
   switch(action.type) {
     case 'LOADING_CONCERTS':
@@ -18,6 +19,13 @@ const concertsReducer = (state = { concerts: [], loading: false }, action) => {
           concerts: state.concerts.filter(concert => concert.id !== action.payload.id),
           ...state
         }
+
+    // case 'SEARCH_CONCERTS':
+    //   return {
+    //   ...state,
+    //   concerts: this.state.concerts.filter((val) => val.includes(value)),
+    //   ...state, value, concerts 
+    // }
 
     default:
       return state;
