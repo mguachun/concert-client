@@ -22,25 +22,7 @@ class App extends Component {
 
   componentDidMount() {
     this.props.newFetchConcertsWithDispatchFn()
-    // fetch("http://localhost:3000/concerts")
-    //   .then(response => {
-    //     return response.json();
-    //   })
-    //   .then((responseJSON) => {
-    //     // debugger
-    //     // dispatch({ type: 'ADD_CONCERTS', concerts: responseJSON })
-    //     console.log(responseJSON);
-
-    //       this.setState(() => {
-    //         return {
-    //           concerts: responseJSON
-    //         }
-    //       }, () => console.log(this.setState) )
-    //     });
-
-    //   });
     } 
-
 
 
     render() {
