@@ -20,13 +20,6 @@ const concertsReducer = (state = { concerts: [], loading: false }, action) => {
           ...state
         }
 
-    // case 'SEARCH_CONCERTS':
-    //   return {
-    //   ...state,
-    //   concerts: this.state.concerts.filter((val) => val.includes(value)),
-    //   ...state, value, concerts 
-    // }
-
     default:
       return state;
   }
