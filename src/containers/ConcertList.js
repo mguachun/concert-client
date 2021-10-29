@@ -17,20 +17,13 @@ class ConcertList extends Component {
             .then(response => {
                 return response.json()
             }).then(data => {
-        // debugger
-        // dispatch({ type: 'ADD_CONCERTS', concerts: responseJSON })
-        // console.log(responseJSON)})
         this.addConcert(data)
-
-        // this.props.fetchConcerts()
         })
         
     }
 
 
     deleteConcert(object) {
-        // console.log(concert)
-
         fetch(`http://localhost:3000/concerts/${object.id}`, {
             method: 'DELETE',
             headers: {
@@ -49,7 +42,6 @@ class ConcertList extends Component {
 
 
     addConcert = (concertData) => {
-        // console.log(concertData)
         this.setState({
             concerts: concertData
         })
@@ -61,17 +53,11 @@ class ConcertList extends Component {
         )
     }
 
-
-
-
-
     render() {
         return (
             <div>
                 <h1 className="c-index">Concert Index:</h1>
                 {this.state.concerts ? this.displayConcerts() : "loading"}
-                {/* //using props  */}
-                {/* this.displayConcerts() */}
             </div>
         )
     }
