@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { newFetchConcerts } from './actions/ConcertActions'
+import { fetchConcerts } from './actions/ConcertActions'
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import './index.css';
 import './App.css';
@@ -10,12 +10,6 @@ import Header from "./components/Header";
 import NavBar from "./components/NavBar";
 import ConcertForm from "./components/forms/ConcertForm";
 import ConcertList from "./containers/ConcertList";
-// import Concert from "./containers/Concert"
-
-
-// import Search from "./containers/Search";
-
-
 
 class App extends Component {
 
@@ -51,7 +45,7 @@ class App extends Component {
 
 const mdp = (globalDispatch) => {
   return {
-    newFetchConcertsWithDispatchFn: () => globalDispatch(newFetchConcerts())
+    newFetchConcertsWithDispatchFn: () => globalDispatch(fetchConcerts())
   }
 }
 
