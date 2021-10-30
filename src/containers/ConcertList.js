@@ -1,55 +1,13 @@
 import { Component } from 'react'
 import Concert from "./Concert"
+import {connect} from "react-redux"
+import {deleteConcert} from "../actions/ConcertActions"
 
 class ConcertList extends Component {
-    constructor(props) {
-        super()
-        this.state = {}
-    }
-
-    state = {
-        concerts: []
-    }
-
-
-    componentDidMount() {
-        fetch("http://localhost:3000/concerts")
-            .then(response => {
-                return response.json()
-            }).then(data => {
-        this.addConcert(data)
-        })
-        
-    }
-
-
-    deleteConcert(object) {
-        fetch(`http://localhost:3000/concerts/${object.id}`, {
-            method: 'DELETE',
-            headers: {
-                'Content-type': 'application/json',
-                'Accept': 'application/json'
-            }
-
-        })
-            .then(res => res.json())
-            .then(res => console.log(res))
-        window.location.replace(`http://localhost:3001/`)
-
-
-    }
-
-
-
-    addConcert = (concertData) => {
-        this.setState({
-            concerts: concertData
-        })
-    }
 
     displayConcerts = () => {
         return (
-            this.state.concerts.map(instance => <Concert deleteConcert={this.deleteConcert} object={instance}/> )
+            this.props.concerts.map(instance => <Concert deleteConcert={this.props.deleteConcert} object={instance}/> )
         )
     }
 
@@ -57,13 +15,19 @@ class ConcertList extends Component {
         return (
             <div>
                 <h1 className="c-index">Concert Index:</h1>
-                {this.state.concerts ? this.displayConcerts() : "loading"}
+                {!this.props.loading ? this.displayConcerts() : "loading"}
             </div>
         )
     }
 }
 
-export default ConcertList;
+export default connect(state => {
+    return {
+        concerts: state.concerts,
+        loading: state.loading
+    }
+}, { deleteConcert }
+)(ConcertList);
 
 
 
