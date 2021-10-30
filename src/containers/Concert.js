@@ -2,7 +2,6 @@ import { Component } from 'react';
 
 class Concert extends Component {
     render() {
-        
         return (
             <div className="concert-data"><h1>{this.props.object.artist} 🎤   </h1>
                 Concert Title: {this.props.object.concert_title}<br />
