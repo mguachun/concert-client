@@ -1,41 +1,23 @@
 import { Component } from 'react';
+import { connect } from "react-redux";
+import { deleteConcert, sendForm } from '../../actions/ConcertActions';
 
 
 class ConcertForm extends Component {
 
-    state = {
-        concerts: []
-    }
 
+    state = {artist: '',
+    concert_title: '',
+    venue: '',
+    date: '',
+    genre:'',
+    comment:''}
 
 
     handleSubmit = (e) => {
-        console.log(e.target)
         e.preventDefault();
-        e.target.reset()
-
-      const concert = {...this.state}
-      const url = "http://localhost:3000/concerts"
-        fetch(url, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(concert),
-        })
-        .then(resp => resp.json())
-        .then(data => {
-            this.setState({
-                artist: '',
-                concert_title: '',
-                venue: '',
-                date: '',
-                genre:'',
-                comment:''
-            })
-        })
+        this.props.sendFormWithDispatchFn(this.state)
         window.location.replace(`http://localhost:3001/`)
-      
     };
 
     onFormChange = (e) => {
@@ -48,12 +30,12 @@ class ConcertForm extends Component {
         }, () => console.log(this.state))
     }
 
-        //allows change of state for any field DRY
+      
         handleChange = (e) => {
             this.setState({
                 [e.target.name]: e.target.value
-    
             });
+            
         };
 
         displayFormChange = () => {
@@ -65,38 +47,35 @@ class ConcertForm extends Component {
                 <h1> Track a Ticket </h1>
                 <div>
                     <label htmlFor="artist">Artist:</label>
-                    <input name="artist" onChange={this.onFormChange} value={artist} />
+                    <input name="artist" onChange={this.onFormChange} value={this.state.artist}/>
                     </div>
                     <br></br>
                     <div>
                     <label htmlFor="Concert Title">Concert Title:</label>
-                    <input  name="concert_title" onChange={this.onFormChange} value={concert_title}/>
+                    <input  name="concert_title" onChange={this.onFormChange} value={this.state.concert_title}/>
                     </div>
                     <br></br>
                     <div>
                     <label htmlFor="Venue">Venue:</label>
-                    <input name="venue" onChange={this.onFormChange} value={venue}/>
+                    <input name="venue" onChange={this.onFormChange} value={this.state.venue}/>
                     </div>
                     <br></br>
                     <div>
                     <label htmlFor="Date">Date:</label>
-                    <input name="date" onChange={this.onFormChange} value={date} n/>
+                    <input name="date" onChange={this.onFormChange} value={this.state.date} />
                     </div>
                     <br></br>
                     <div>
                     <label htmlFor="Genre">Genre:</label>
-                    <input name="genre" onChange={this.onFormChange} value={genre} />
+                    <input name="genre" onChange={this.onFormChange} value={this.state.genre} />
                     </div>
                     <br></br>
                     <div>
                     <label htmlFor="Comment">Comment:</label>
-                    <input name="comment" onChange={this.onFormChange} value={comment} />
+                    <input name="comment" onChange={this.onFormChange} value={this.state.comment} />
                     </div>
                     <br></br>
                     <input type="submit"  value="Add Concert"/>
-                    {/* <div>
-                        <button>Submit</button>
-                    </div> */}
                 </form>
                 <img
           style={{ float: "left", paddingLeft: "215px", marginTop: "-400px" }}
@@ -111,16 +90,25 @@ class ConcertForm extends Component {
 
 
     render() {
-    console.log(this.state.concerts)
+        console.log(this.props)
         return (
             <div>
                 { this.displayFormChange() } 
             </div>
-
-    
         );
-      
     };
 };
 
-export default ConcertForm;
+const mdp = (globalDispatch) => {
+    return {
+      deleteConcert: () => globalDispatch(deleteConcert()),
+      sendFormWithDispatchFn: (obj) => globalDispatch(sendForm(obj))
+    }
+  }
+
+export default connect(null, mdp)(ConcertForm);
+
+
+// connect here doesn't need to map state to props because this component
+// doesn't use the list. it just updates it
+// connect(null, mapDispatchToProps)
