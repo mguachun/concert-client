@@ -52,7 +52,6 @@ export const sendForm = (concert) => {
 }
 
   
-
 export const deleteConcert = (concert) => {
   return (dispatch) => {
     fetch(`http://localhost:3000/concerts/${concert.id}.json`,
