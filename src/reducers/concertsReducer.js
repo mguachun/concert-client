@@ -1,4 +1,6 @@
+
 const concertsReducer = (state = { concerts: [], loading: false }, action) => {
+  
   switch(action.type) {
     case 'LOADING_CONCERTS':
       return {
