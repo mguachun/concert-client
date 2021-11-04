@@ -17,6 +17,8 @@ class ConcertForm extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.sendFormWithDispatchFn(this.state)
+        //props being sent to dispatch a call on it 
+        //passing data from one component to another 
         window.location.replace(`http://localhost:3001/`)
     };
 
