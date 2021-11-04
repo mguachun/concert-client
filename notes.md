@@ -62,3 +62,103 @@ class ButtonCounter extends Component {
 }
 
 export default ButtonCounter; -->
+
+<!-- 
+//practice counter 
+import React from 'react'
+
+
+
+class Counter extends React.Component {
+  state = {
+    count: 0
+  };
+
+  handleClick = () => {
+    this.setState(prev => ({ count: prev.count + 1 }));
+  };
+
+
+
+  render() {
+    return (
+        <div>
+      <button className="block" onClick={this.handleClick} className="block" >
+        <div className="counter">{this.state.count}</div>
+        </button>
+    
+      </div>
+
+
+    );
+  }
+}
+export default Counter; -->
+
+------------------------------------------------------------------------------------
+<!-- import React from 'react'
+
+
+
+class Count extends React.Component {
+  state = {
+    count: 0
+  };
+
+  handleClick = () => {
+    this.setState(prev => ({ count: prev.count + 1 }));
+  };
+
+  decreaseCount = () => {
+    this.setState(prev => ({ count: prev.count - 1}));
+  }
+
+  incrementFiveCount = () => {
+    this.setState(prev => ({ count: prev.count + 5}));
+  }
+  toggleClick = () => {
+    this.setState({ count: !this.state.count});
+  }
+
+  render() {
+    return (
+        <div>
+        {/* <button className="block" onClick={this.handleClick}  >
+        <div className="count">{this.state.count}</div>
+        </button> */}
+
+        <button onClick={this.handleClick}> Click to increment by 1</button>
+        <button onClick={this.decreaseCount}> Click to decrease by 1</button>
+        <button onClick={this.incrementFiveCount}> Click to increase by 5</button>
+        <button onClick={this.toggleClick}>
+          { this.state.count ? 'Hide number' : 'Show number'}
+           </button>
+           { this.state.count ? <h2>{this.state.count}</h2> : ''}
+
+      </div>
+
+
+    );
+  }
+}
+export default Count; -->
+
+
+=----------------------------------------------------------------------------------------
+<!-- Search : 
+import React from 'react';
+
+const SearchBar = ({keyword,setKeyword}) => {
+  const BarStyling = {width:"20rem",background:"#F2F1F9", border:"none", padding:"0.5rem"};
+  return (
+    <input 
+     style={BarStyling}
+     key="random1"
+     value={keyword}
+     placeholder={"Search Tickets"}
+     onChange={(e) => setKeyword(e.target.value)}
+    />
+  );
+}
+
+export default SearchBar -->
