@@ -1,4 +1,5 @@
 export const addConcert = (concert) => ({ type: "ADD_CONCERT", payload: concert})
+
 export const fetchConcerts = () => {
   return (dispatch) => {
     dispatch({ type: 'LOADING_CONCERTS'})
@@ -44,7 +45,6 @@ export const sendForm = (concert) => {
     fetch("http://localhost:3000/concerts", configObj)
     .then(res => res.json())
     .then(json => {
-      //debugger
       dispatch(addConcert(json))
       
     })
