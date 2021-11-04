@@ -14,12 +14,21 @@ class ConcertList extends Component {
     render() {
         return (
             <div>
+                
                 <h1 className="c-index">Concert Index:</h1>
                 {!this.props.loading ? this.displayConcerts() : "loading"}
+
+        
             </div>
         )
+        
+     
+
     }
+
+
 }
+
 
 export default connect(state => {
     return {
