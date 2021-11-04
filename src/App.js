@@ -16,16 +16,17 @@ class App extends Component {
 
   componentDidMount() {
     this.props.newFetchConcertsWithDispatchFn()
-    } 
+  }
 
 
     render() {
       console.log(this.props)
       return (
+
         <Router>
           <div className="app">
             <NavBar />
-            <Header /> 
+            <Header />
             <Route path="/" component={Home} />
             <Route path="/create" component={ConcertForm} />
             <Route path="/about" component={About} />
@@ -34,7 +35,7 @@ class App extends Component {
             <div>
             </div>
             <ConcertList />
-          
+
           </div>
         </Router>
       );
@@ -43,13 +44,13 @@ class App extends Component {
 
 
 
-const mdp = (globalDispatch) => {
-  return {
-    newFetchConcertsWithDispatchFn: () => globalDispatch(fetchConcerts())
+  const mdp = (globalDispatch) => {
+    return {
+      newFetchConcertsWithDispatchFn: () => globalDispatch(fetchConcerts())
+    }
   }
-}
 
-const msp = (globalState) => (globalState)
+  const msp = (globalState) => (globalState)
 
-export default connect(msp,mdp)(App); 
-// first arg allows you to access and second arg manipulate the store
+export default connect(msp, mdp)(App);
+
