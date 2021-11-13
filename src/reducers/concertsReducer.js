@@ -1,4 +1,3 @@
-
 const concertsReducer = (state = { concerts: [], loading: false }, action) => {
   
   switch(action.type) {
