@@ -162,3 +162,59 @@ const SearchBar = ({keyword,setKeyword}) => {
 }
 
 export default SearchBar -->
+--------------------------------------------------------------------------------------
+<!-- import { Component } from 'react'; -->
+<!-- class InputCount extends Component {
+    state = {
+        text: "",
+        counter: 0,
+        
+      }
+      handleChange = (e) => {
+        this.setState({
+            text: e.target.value
+        })
+      }
+
+      handleClick = (e) => {
+        this.setState({
+            counter: 
+            this.state.counter + this.state.text.length
+        })
+        
+      }
+      render() {
+        return(
+          <div style ={{textAlign: "center"}}>
+           <p onClick={this.handleClick}>Count Input: {this.state.text.length}</p> 
+           <input onChange={this.handleChange}></input> 
+          </div> 
+        );
+      }
+    }
+
+
+export default InputCount; -->
+-------------------------------------------------------------------------------------------------------------
+<!-- import { Component } from 'react';
+class Count extends Component{
+    state = {
+        count: 0
+      };
+    
+      handleClick = () => {
+        this.setState(prev => ({ count: prev.count + 1 }));
+      };
+
+    
+      render() {
+        return (
+            <div>
+            <button onClick={this.handleClick}> Like   {this.state.count} </button>
+          </div>
+    
+    
+        );
+      }
+}
+export default Count; -->
