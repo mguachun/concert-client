@@ -2,12 +2,12 @@ import { Component } from 'react'
 import Concert from "./Concert"
 import {connect} from "react-redux"
 import {deleteConcert} from "../actions/ConcertActions"
-
+// import Counter from "./Counter"
 class ConcertList extends Component {
 
    state = {
     genre: 'All'
-}
+    }
 
     filteredConcerts = () => {
         
@@ -23,7 +23,7 @@ class ConcertList extends Component {
 
 
     displayConcerts = () => {
-        const concerts = this.state.genre == "All" ? this.props.concerts : this.filteredConcerts()
+        const concerts = this.state.genre === "All" ? this.props.concerts : this.filteredConcerts()
         return (
             concerts.map(instance => <Concert deleteConcert={this.props.deleteConcert} object={instance}/> )
         )
@@ -32,7 +32,8 @@ class ConcertList extends Component {
     render() {
         return (
             <div>
-                <label for="search-concerts"> Choose a Genre</label>
+              {/* <Counter /> */}
+                <label for="search-concerts"> Choose a Genre: </label>
                 <select name="genres" id="genre" onChange={this.handleChange} value={this.state.genre}>
                     <option value="All">All</option>
                     <option value="Rock">Rock</option>
@@ -45,7 +46,7 @@ class ConcertList extends Component {
                     <option value="Country">Country</option>
                     <option value="Punk">Punk</option>
                     <option value="Pop">Pop</option>
-                    <option value="Classical">Classical</option>
+                    <option value="Garage Rock">Garage Rock</option>
                 </select>
                 
         
@@ -55,12 +56,7 @@ class ConcertList extends Component {
                
             </div>
         )
-        
-     
-
     }
-
-
 }
 
 
