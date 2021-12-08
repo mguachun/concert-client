@@ -33,15 +33,9 @@ class ConcertForm extends Component {
     }
 
       
-        handleChange = (e) => {
-            this.setState({
-                [e.target.name]: e.target.value
-            });
-            
-        };
 
         displayFormChange = () => {
-            const { artist, concert_title, venue, date, genre, comment } = this.state
+           
             return(
 
                 <div className="form-container">
