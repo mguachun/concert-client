@@ -18,7 +18,7 @@ const Home = () => {
           borderStyle: "dashed",
           borderRadius: "25px",
           borderWidth: "2px",
-          borderColor: "#3621ad",
+          borderColor: "rgb(34, 3, 31)",
           marginLeft: "20px",
           marginRight: "20px",
   
