@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@200&display=swap');
 
-
-
 h1, h3, p, div{
   font-family: 'Stick No Bills', sans-serif;
 }
@@ -80,7 +78,7 @@ margin-left: 10px;
   height: 450px;
   margin-left: 90px;
   margin: 50px;
-  font-size: 20px;
+  font-size: 20px; 
 }
 
 body {
@@ -95,4 +93,18 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.submit_btn{
+  background-color: rgb(247, 247, 247);
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(34, 3, 31);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.submit_btn:hover {
+  background-color: rgba(34, 3, 31);
+  color: rgb(247, 247, 247);
 }
