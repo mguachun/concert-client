@@ -71,7 +71,7 @@ class ConcertForm extends Component {
                     <input name="comment" onChange={this.onFormChange} value={this.state.comment} />
                     </div>
                     <br></br>
-                    <input type="submit"  value="Add Concert"/>
+                    <input className="submit_btn" type="submit"  value="Add Concert"/>
                 </form>
                 <img
           style={{ float: "left", paddingLeft: "215px", marginTop: "-400px" }}
