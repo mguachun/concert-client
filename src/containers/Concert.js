@@ -11,8 +11,7 @@ class Concert extends Component {
                 Genre: {this.props.object.genre}<br />
                 Comment: <em> {this.props.object.comment} </em>
                 <button className="list-delete-btn" onClick={() => this.props.deleteConcert(this.props.object)}> Delete X</button>
-               
-            
+                
             </div>
         )
  
