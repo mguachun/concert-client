@@ -31,7 +31,7 @@ const About = () => {
        special moments in time. The digitization of tickets and concerts all together is what ultimately 
        inspired me to bring this concept into a new age. 
        <img
-          style={{ float: "center", height: "260px", width: "500px"}}
+          style={{ float: "center", height: "260px", width: "500px", paddingTop: "50px"}}
           src="https://media.giphy.com/media/cgW5iwX0e37qg/giphy.gif"
           alt="Jake from Adventure Time listening to a walkman"
           height="50px"
