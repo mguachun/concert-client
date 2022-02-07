@@ -51,6 +51,8 @@ margin-left: 10px;
 }
 
 .concert-data {  
+  text-align: center;
+  margin-left: 60px;
   background-color: rgb(247, 247, 247);
   border-radius: 0.25rem;
   box-shadow: 0 20px 40px -14px rgba(34, 3, 31);
@@ -75,12 +77,15 @@ margin-left: 10px;
   border-radius: 25px;
   border: 2px solid rgba(34, 3, 31);
   padding: 50px;
+  margin-left: 50px;
   width: 600px;
   height: 450px;
   margin-left: 90px;
   margin: 50px;
   font-size: 20px; 
 }
+
+
 
 body {
   margin: 0;
