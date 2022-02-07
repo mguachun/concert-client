@@ -2,6 +2,7 @@
 
 h1, h3, p, div{
   font-family: 'Stick No Bills', sans-serif;
+  color: rgba(34, 3, 31);
 }
 
 .visually-hidden {
@@ -72,7 +73,7 @@ margin-left: 10px;
 }
 .form-container {
   border-radius: 25px;
-  border: 2px solid #281aaa;
+  border: 2px solid rgba(34, 3, 31);
   padding: 50px;
   width: 600px;
   height: 450px;
@@ -88,6 +89,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(244, 245, 246);
 }
 
 code {
@@ -96,7 +98,7 @@ code {
 }
 
 .submit_btn{
-  background-color: rgb(247, 247, 247);
+  background-color: rgb(244, 245, 246);
   border-radius: 0.25rem;
   box-shadow: 0 20px 40px -14px rgba(34, 3, 31);
   display: flex;
