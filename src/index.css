@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@200&display=swap');
 
+
+
 h1, h3, p, div{
   font-family: 'Stick No Bills', sans-serif;
 }
@@ -29,10 +31,6 @@ margin-left: 10px;
 }
 
 .list-delete-btn {
-  /* border-radius: 10px;
-  border: 2px solid #281aaa;
-  margin-right: 1010px;
-  text-align: center; */
   color: rgb(34, 3, 31);
   padding: 0.8rem;
   font-size: 14px;
@@ -53,22 +51,13 @@ margin-left: 10px;
   color: rgb(247, 247, 247);
 }
 
-.concert-data {
-  /* border-radius: 25px;
-  border: 2px solid #281aaa;
-  margin-left: 10px;
-  margin-right: 100px;
-  margin-bottom: 10px;
-  padding: 10px;
-  font-size: 20px; */
-  
-    background-color: rgb(247, 247, 247);
-    border-radius: 0.25rem;
-    box-shadow: 0 20px 40px -14px rgba(34, 3, 31);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-
+.concert-data {  
+  background-color: rgb(247, 247, 247);
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(34, 3, 31);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 
