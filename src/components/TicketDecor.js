@@ -3,7 +3,7 @@ const TicketDecor = () => {
     return(
     <div>
         <img
-            style={{ float: "left", padding: "10px", paddingLeft: "220px", marginTop: "-340px" }}
+            style={{ float: "left", padding: "10px", paddingLeft: "420px", marginTop: "-340px" }}
             src="https://media.giphy.com/media/MUFlTPzL3fBmwIPiTK/giphy.gif"
             alt="blinking ticket gif"
             height="50px"
