@@ -6,7 +6,7 @@ const link = {
   fontstyle: 'sans-serif',
   width: '100px',
   margin: '0 4px 4px',
-  background: '#3621ad',
+  background: 'rgb(34, 3, 31)',
   textDecoration: 'none',
   color: 'white',
   borderRadius: '30px',
@@ -24,7 +24,7 @@ class NavBar extends React.Component {
           exact
           style={link}
           activeStyle={{
-            background: '#3621ad'
+            background: 'rgb(34, 3, 31)'
           }}
         >Home</NavLink>
         <NavLink
@@ -32,7 +32,7 @@ class NavBar extends React.Component {
           exact
           style={link}
           activeStyle={{
-            background: '#3621ad'
+            background: 'rgb(34, 3, 31)'
           }}
         >Add a Ticket</NavLink>
         <NavLink
@@ -40,7 +40,7 @@ class NavBar extends React.Component {
           exact
           style={link}
           activeStyle={{
-            background: '#3621ad'
+            background: 'rgb(34, 3, 31)'
           }}
           >About</NavLink>
       </div>
