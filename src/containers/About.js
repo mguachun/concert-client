@@ -10,16 +10,16 @@ const About = () => {
           
           textAlign: "center",
           fontSize: "21px",
-          padding: "30px",
+          padding: "60px",
           paddingRight: "50px",
           paddingLeft: "50px",
-          marginLeft: "20px",
+          marginLeft: "80px",
           borderStyle: "dashed",
           borderRadius: "25px",
           borderWidth: "2px",
-          borderColor: "#3621ad",
+          borderColor: "rgb(34, 3, 31)",
           width: "500px",
-          height: "250px"
+          height: "450px"
           
 
         }}
@@ -30,16 +30,17 @@ const About = () => {
        I had from each concert. Concerts have changed quite a bit since then but tickets continue to be a momento that encapsulates
        special moments in time. The digitization of tickets and concerts all together is what ultimately 
        inspired me to bring this concept into a new age. 
-
-
-      </p>
-        <img
-          style={{ float: "right", padding: "50px", paddingLeft: "220px", marginTop: "-339px", height: "260px", width: "500px"}}
+       <img
+          style={{ float: "center", marginTop: "-539px", height: "260px", width: "500px"}}
           src="https://media.giphy.com/media/cgW5iwX0e37qg/giphy.gif"
           alt="Jake from Adventure Time listening to a walkman"
           height="50px"
           width="50px"
         />
+
+
+      </p>
+       
       </div>
     );
   };
