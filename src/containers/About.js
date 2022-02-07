@@ -13,13 +13,13 @@ const About = () => {
           padding: "60px",
           paddingRight: "50px",
           paddingLeft: "50px",
-          marginLeft: "80px",
+          marginLeft: "200px",
           borderStyle: "dashed",
           borderRadius: "25px",
           borderWidth: "2px",
           borderColor: "rgb(34, 3, 31)",
-          width: "500px",
-          height: "450px"
+          width: "700px",
+          height: "600px"
           
 
         }}
@@ -31,7 +31,7 @@ const About = () => {
        special moments in time. The digitization of tickets and concerts all together is what ultimately 
        inspired me to bring this concept into a new age. 
        <img
-          style={{ float: "center", marginTop: "-539px", height: "260px", width: "500px"}}
+          style={{ float: "center", height: "260px", width: "500px"}}
           src="https://media.giphy.com/media/cgW5iwX0e37qg/giphy.gif"
           alt="Jake from Adventure Time listening to a walkman"
           height="50px"
