@@ -59,6 +59,9 @@ margin-left: 10px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  margin-bottom: 10px;
+  /* grid-template-rows: 70px auto;
+  grid-template-columns: 40% auto; */
 }
 
 
