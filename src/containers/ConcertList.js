@@ -33,7 +33,7 @@ class ConcertList extends Component {
         return (
             <div>
               {/* <Counter /> */}
-                <label for="search-concerts"> Choose a Genre: </label>
+                <label for="search-concerts"> Filter by Genre: </label>
                 <select name="genres" id="genre" onChange={this.handleChange} value={this.state.genre}>
                     <option value="All">All</option>
                     <option value="Rock">Rock</option>
