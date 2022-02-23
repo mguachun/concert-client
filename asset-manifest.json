@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/concert-client/static/css/main.811b7619.chunk.css",
+    "main.js": "/concert-client/static/js/main.faa48613.chunk.js",
+    "main.js.map": "/concert-client/static/js/main.faa48613.chunk.js.map",
+    "runtime-main.js": "/concert-client/static/js/runtime-main.229f57f2.js",
+    "runtime-main.js.map": "/concert-client/static/js/runtime-main.229f57f2.js.map",
+    "static/js/2.399a9588.chunk.js": "/concert-client/static/js/2.399a9588.chunk.js",
+    "static/js/2.399a9588.chunk.js.map": "/concert-client/static/js/2.399a9588.chunk.js.map",
+    "static/js/3.632f707c.chunk.js": "/concert-client/static/js/3.632f707c.chunk.js",
+    "static/js/3.632f707c.chunk.js.map": "/concert-client/static/js/3.632f707c.chunk.js.map",
+    "index.html": "/concert-client/index.html",
+    "static/css/main.811b7619.chunk.css.map": "/concert-client/static/css/main.811b7619.chunk.css.map",
+    "static/js/2.399a9588.chunk.js.LICENSE.txt": "/concert-client/static/js/2.399a9588.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.229f57f2.js",
+    "static/js/2.399a9588.chunk.js",
+    "static/css/main.811b7619.chunk.css",
+    "static/js/main.faa48613.chunk.js"
+  ]
+}
