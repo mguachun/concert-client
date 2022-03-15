@@ -33,7 +33,8 @@ class ConcertList extends Component {
         return (
             <div>
               {/* <Counter /> */}
-                <label for="search-concerts"> Filter by Genre: </label>
+              <div className="filter">
+              <label for="search-concerts"> Filter by Genre: </label>
                 <select name="genres" id="genre" onChange={this.handleChange} value={this.state.genre}>
                     <option value="All">All</option>
                     <option value="Rock">Rock</option>
@@ -49,9 +50,14 @@ class ConcertList extends Component {
                     <option value="Garage Rock">Garage Rock</option>
                 </select>
                 
-        
-                <h1 className="c-index">Concert Index:</h1>
+
+              </div>
+              
+                <div className="c-index">
+                <h1 >Concert Index:</h1>
                 {!this.props.loading ? this.displayConcerts() : "loading"}
+                </div>
+   
 
                
             </div>
