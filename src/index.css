@@ -62,8 +62,7 @@ h1, h3, p, div{
   flex-direction: column;
   overflow: hidden;
   margin-bottom: 10px;
-  /* grid-template-rows: 70px auto;
-  grid-template-columns: 40% auto; */
+  
 }
 
 
