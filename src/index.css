@@ -21,12 +21,14 @@ h1, h3, p, div{
   padding-left: "20px";
 }
 .c-index {
-margin-left: 10px;
+  flex-direction: row;
+  
 }
 
 .filter-bar {
   font-size: 20px;
   margin-left: 10px;
+  text-align: center;
 }
 
 .list-delete-btn {
@@ -47,13 +49,13 @@ margin-left: 10px;
 
 .list-delete-btn:hover {
   background-color: rgba(34, 3, 31);
-  color: rgb(247, 247, 247);
+  color: rgb(226, 233, 235);
 }
 
 .concert-data {  
   text-align: center;
   margin-left: 360px;
-  background-color: rgb(247, 247, 247);
+  background-color: rgb(226, 233, 235);
   border-radius: 0.25rem;
   box-shadow: 0 20px 40px -14px rgba(34, 3, 31);
   display: flex;
@@ -117,4 +119,8 @@ code {
 .submit_btn:hover {
   background-color: rgba(34, 3, 31);
   color: rgb(247, 247, 247);
+}
+
+.filter {
+  text-align: center;
 }
