@@ -53,7 +53,7 @@ class ConcertList extends Component {
 
               </div>
               
-                <div className="c-index">
+                <div className="main" >
                 <h1 >Concert Index:</h1>
                 {!this.props.loading ? this.displayConcerts() : "loading"}
                 </div>
