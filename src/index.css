@@ -124,7 +124,8 @@ h3,  div{
 
 
 .submit_btn{
-  background-color: rgb(244, 245, 246);
+  background-color: rgb(66, 68, 125);
+  color: white;
   border-radius: 0.25rem;
   box-shadow: 0 20px 40px -14px  rgb(66, 68, 125);
   display: flex;
@@ -180,7 +181,8 @@ h3,  div{
 .card_content {
  height: auto;
  width: 90rem;
- display: flexbox;
+ /* display: flexbox; */
+ padding: 10px;
 }
 
 .card_title {
