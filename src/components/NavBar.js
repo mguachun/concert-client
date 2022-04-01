@@ -2,11 +2,11 @@ import React from 'react'
 import { NavLink } from 'react-router-dom';
 
 const link = {
-  fontfamily: 'Stick No Bills',
-  fontstyle: 'sans-serif',
+
+
   width: '100px',
   margin: '0 4px 4px',
-  background: 'rgb(34, 3, 31)',
+  background: 'rgb(66, 68, 125)',
   textDecoration: 'none',
   color: 'white',
   borderRadius: '30px',
@@ -24,7 +24,7 @@ class NavBar extends React.Component {
           exact
           style={link}
           activeStyle={{
-            background: 'rgb(34, 3, 31)'
+            background: 'rgb(66, 68, 125)'
           }}
         >Home</NavLink>
         <NavLink
@@ -32,7 +32,7 @@ class NavBar extends React.Component {
           exact
           style={link}
           activeStyle={{
-            background: 'rgb(34, 3, 31)'
+            background: 'rgb(66, 68, 125)'
           }}
         >Add a Ticket</NavLink>
         <NavLink
@@ -40,7 +40,7 @@ class NavBar extends React.Component {
           exact
           style={link}
           activeStyle={{
-            background: 'rgb(34, 3, 31)'
+            background: 'rgb(66, 68, 125)'
           }}
           >About</NavLink>
       </div>
