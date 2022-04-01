@@ -42,44 +42,38 @@ class ConcertForm extends Component {
                 <form id="concert-form" onSubmit={this.handleSubmit}>
                 <h1> Track a Ticket </h1>
                 <div>
-                    <label htmlFor="artist">Artist:</label>
+                    <label htmlFor="artist">Artist: </label>
                     <input name="artist" onChange={this.onFormChange} value={this.state.artist}/>
                     </div>
                     <br></br>
                     <div>
-                    <label htmlFor="Concert Title">Concert Title:</label>
+                    <label htmlFor="Concert Title">Concert Title: </label>
                     <input  name="concert_title" onChange={this.onFormChange} value={this.state.concert_title}/>
                     </div>
                     <br></br>
                     <div>
-                    <label htmlFor="Venue">Venue:</label>
+                    <label htmlFor="Venue">Venue: </label>
                     <input name="venue" onChange={this.onFormChange} value={this.state.venue}/>
                     </div>
                     <br></br>
                     <div>
-                    <label htmlFor="Date">Date:</label>
+                    <label htmlFor="Date">Date: </label>
                     <input name="date" onChange={this.onFormChange} value={this.state.date} />
                     </div>
                     <br></br>
                     <div>
-                    <label htmlFor="Genre">Genre:</label>
+                    <label htmlFor="Genre">Genre: </label>
                     <input name="genre" onChange={this.onFormChange} value={this.state.genre} />
                     </div>
                     <br></br>
                     <div>
-                    <label htmlFor="Comment">Comment:</label>
+                    <label htmlFor="Comment">Comment: </label>
                     <input name="comment" onChange={this.onFormChange} value={this.state.comment} />
                     </div>
                     <br></br>
                     <input className="submit_btn" type="submit"  value="Add Concert"/>
                 </form>
-                <img
-          style={{ float: "left", paddingLeft: "215px", marginTop: "-400px" }}
-          src="https://media.giphy.com/media/MUFlTPzL3fBmwIPiTK/giphy.gif"
-          alt="blinking ticket gif"
-          height="50px"
-          width="50px"
-        />
+         
             </div>
             )
         }
