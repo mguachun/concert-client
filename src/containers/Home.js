@@ -10,12 +10,18 @@ const Home = () => {
         <p
         style={{
           
+  
+          paddingRight: "20px",
+          paddingLeft: "20px",
+          color: "white",
+
+          backgroundColor: "rgb(66, 68, 125)",
           textAlign: "center",
           fontSize: 21,
           padding: "30px",
-          paddingRight: "20px",
-          paddingLeft: "20px",
-          borderStyle: "dashed",
+          // paddingRight: "20px",
+          // paddingLeft: "20px",
+  
           borderRadius: "25px",
           borderWidth: "2px",
           borderColor: "rgb(34, 3, 31)",
