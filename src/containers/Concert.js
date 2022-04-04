@@ -9,7 +9,7 @@ class Concert extends Component {
                     <div className="cards_item">
                         <div className="card">
                             <div className="card_content">
-                                <h1 className="card-title">{this.props.object.artist} 🎤   </h1>
+                                <h1 className="card-title">{this.props.object.artist} 🎵   </h1>
                                 Concert Title: {this.props.object.concert_title}<br />
                                 Venue: {this.props.object.venue} <br />
                                 Date: {this.props.object.date} <br />
