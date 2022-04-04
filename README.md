@@ -1,8 +1,8 @@
-Ticket Tracker is a single page application that helps you keep track of your concerts and live show events. It allows you to log planned tickets for future shows and record passed shows for memories and reference.
+Ticket Tracker is a single page application that helps you keep track of your concerts and live show events. It allows you to log planned tickets for future shows and record passed shows for memories and reference. 
 
 ## Installation
 
-To get started first, fork and clone this repo. Also fork and clone [the frontend rails api repo](https://github.com/mguachun/flix-fix-backend.git).
+To get started first, fork and clone this repo. Also fork and clone [the backend rails api repo](https://github.com/mguachun/concert-api-backend.git).
 
 And then execute:
 
@@ -40,7 +40,7 @@ This will open up the index html file and get your development environment start
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/mguachun/flix-fix-client.git. 
+Bug reports and pull requests are welcome on GitHub at https://github.com/mguachun/concert-api-backend.git. 
 
 
 ## Available Scripts
